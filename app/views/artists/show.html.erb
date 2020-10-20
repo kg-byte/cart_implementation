@@ -1,0 +1,9 @@
+<h1><%= @artist.name %></h1>
+<%= button_to 'Edit Artist', edit_artist_path(@artist.id), :method => :get %>
+
+<h2>My Songs:</h2>
+<% @artist.songs.each do |song| %>
+<p> Title: <b><%= song.title %></b></p>
+<p> Length: <%= song.length %></p>
+<p> Play Count: <%= song.play_count %></p>
+<% end %>
