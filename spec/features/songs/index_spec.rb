@@ -3,10 +3,11 @@ require "rails_helper"
 describe "As a user" do
   describe "when I visit the /songs path " do
     it "the user sees each song title and playcount" do
-      song_1 = Song.create(title:       "I Really Like You",
+      artist_1 = Artist.create(name: "carly")
+      song_1 = artist_1.songs.create(title:       "I Really Like You",
                            length:      208,
                            play_count:  243810867)
-      song_2 = Song.create(title:       "Call Me Maybe",
+      song_2 = artist_1.songs.create(title:       "Call Me Maybe",
                            length:      199,
                            play_count:  1214722172)
 
