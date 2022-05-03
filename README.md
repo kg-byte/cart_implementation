@@ -8,5 +8,5 @@
     * `rails db:migrate`
     * `rails db:seed`
 
-#Tutorial
+# Tutorial
 https://backend.turing.edu/module2/lessons/authorization
