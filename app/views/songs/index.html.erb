@@ -1,5 +1,12 @@
 <h1>Song List</h1>
 <% @songs.each do |song| %>
-<h2><%= song.title %></h2>
-  <p>Play Count: <%= song.play_count %></p>
+  <ul>
+    <section id="song-<%= song.id %>">
+      <li>
+      <h2><%= song.title %></h2>
+      Play Count: <%= song.play_count %>
+      <%= button_to "Add Song", "/cart/#{song.id}", method: :patch %>
+      </li>
+    </section>
+  </ul>
 <% end %>

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     get 'dashboard', to: 'dashboard#index'
   end
 
+  patch '/cart/:song_id', to: 'cart#update'
+
   get '/users/new', to: 'users#new'
   post '/users', to: 'users#create'
   get '/profile', to: 'users#show'
