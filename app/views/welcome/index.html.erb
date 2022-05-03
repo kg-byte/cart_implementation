@@ -1,0 +1,7 @@
+
+<% if current_user %>
+  <%= link_to "Log Out", '/logout' , method: 'delete'%>
+<% else %>
+  <%= link_to 'Login', '/login' %>
+  <%= link_to 'Register as a User', '/users/new' %>
+<% end %>
